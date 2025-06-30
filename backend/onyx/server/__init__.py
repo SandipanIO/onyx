@@ -17,15 +17,3 @@ def get_hint(topic: str):
 @app.post("/submit-project")
 def submit_project(data: dict):
     return {"status": "received", "message": "Project submitted successfully 🚀"}
-
-# 👇 For local running or Docker CMD
-if __name__ == "__main__":
-    import uvicorn
-    import os
-
-    uvicorn.run(
-        "onyx.server:app",  # ✅ Adjusted for Docker context
-        host="0.0.0.0",
-        port=int(os.environ.get("PORT", 8000)),
-        reload=False
-    )
