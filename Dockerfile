@@ -10,6 +10,9 @@ COPY . .
 # Go into backend directory
 WORKDIR /app/backend
 
+# Add Python path so that "onyx" is importable
+ENV PYTHONPATH="${PYTHONPATH}:/app/backend"
+
 # Install Python dependencies
 RUN pip install --upgrade pip
 RUN pip install -r requirements/default.txt
