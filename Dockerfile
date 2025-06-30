@@ -18,4 +18,4 @@ RUN pip install -r backend/requirements/default.txt
 ENV PYTHONUNBUFFERED=1
 
 # Start the app
-CMD ["python", "-m", "backend.server"]
+CMD ["python", "-m", "backend.onyx.server"]
