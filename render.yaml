@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: onyx-ai
+    env: docker
+    dockerfilePath: deployment/docker_compose/Dockerfile
+    autoDeploy: true
