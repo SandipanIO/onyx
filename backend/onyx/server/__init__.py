@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Query
-from onyx_ingest import get_answer_from_docs, get_hint_from_docs  # Make sure these exist
+from ...onyx_ingest import get_answer_from_docs, get_hint_from_docs
 
 app = FastAPI()
 
