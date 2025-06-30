@@ -1,0 +1,289 @@
+🟢 Module 1: Getting Started With HTML
+________________________________________
+📘 Chapter 1: What Is HTML?
+Concept:
+HTML stands for HyperText Markup Language. It tells the browser what each part of a web page is, such as headings, paragraphs, images, and links.
+Think of it like the skeleton of a website — it gives structure but no design (that’s the job of CSS).
+Where Do You Write HTML?
+You can write HTML in any text editor. We recommend:
+•	Windows: Notepad or VS Code
+•	Mac: TextEdit (in plain text mode) or VS Code
+Folder Structure:
+Create a folder called my-first-website on your desktop.
+Inside that folder, create a file named:
+index.html
+Now add the example code in the file.
+
+Explanation:
+•	<!DOCTYPE html> – Tells the browser this is an HTML5 document
+•	<html> – The root element for all HTML
+•	<head> – Contains info like title (not visible on the page)
+•	<body> – Everything inside here appears on the page
+•	<h1> – Heading 1 (largest)
+•	<p> – Paragraph
+
+We’ll explain headings and paragraphs in detail in Chapter 3.
+
+How to Save:
+•	Open your text editor
+•	Write code
+•	Save as index.html
+•	Make sure file extension is .html not .txt
+How to View the Website:
+•	Right-click on the index.html file
+•	Click Open with > Your Browser (Chrome, Firefox, Safari)
+
+Example:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First Website</title>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+    <p>This is my very first web page. 🎉</p>
+  </body>
+</html>
+Mini Challenge:
+Task: Write an HTML file that says:
+•	A big heading with your name
+•	A short paragraph about why you want to learn web development
+Hint: 
+
+Use h1 and p tags.
+
+Here is an example: 
+
+<h1>John Doe</h1>
+<p>I want to develop elegant websites</p>
+
+Expected Output:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Story</title>
+  </head>
+  <body>
+    <h1>I’m Sam!</h1>
+    <p>I want to learn web development to build cool websites and maybe rule the internet. 😎</p>
+  </body>
+</html>
+________________________________________
+📘 Chapter 2: Basic Structure of an HTML Document
+Concept:
+Every web page requires a clear and consistent layout so that browsers can read and render the content correctly. 
+The example shows the basic skeleton of an HTML page. The structure includes key sections:
+•	<!DOCTYPE html> tells the browser we’re using the latest HTML version (HTML5).
+•	<html> wraps everything and represents the root of your document.
+•	<head> contains meta-information, such as the title, character encoding, or linked files (CSS/JS).
+•	<meta charset="UTF-8">: Ensures your page supports most characters (like emojis 😄)
+•	<title> is what shows on your browser tab.
+•	<body> is where all the visual content goes — headings, paragraphs, images, etc.
+
+Example:
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+  </head>
+  <body>
+    <!-- Visible content goes here -->
+  </body>
+</html>
+Mini Challenge:
+Task:
+•	Create a basic HTML document with a title “Learning HTML is Fun!”
+Expected Output:
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Learning HTML is Fun!</title>
+  </head>
+  <body>
+    <h1>Welcome to My Web Page!</h1>
+  </body>
+</html>
+________________________________________
+📘 Chapter 3: Headings and Paragraphs
+Concept:
+Headings and paragraphs are the foundation of web content.
+•	<h1> to <h6> define headings. Use them hierarchically — <h1> for the main heading, <h2> for subtopics, and so on. Don’t skip levels unless necessary.
+•	<p> defines a paragraph — it automatically adds spacing before and after text.
+Think of <h1> as your page’s title, <h2> as section headings, and <p> as your story or explanation underneath each heading.
+Proper use of headings improves readability and SEO!
+💡 Example:
+<h1>Main Heading</h1>
+<h2>Subheading</h2>
+<p>This is a paragraph of text. You can write as much as you want here.</p>
+🧪 Mini Challenge:
+Task: Create a web page that includes:
+•	A <h1> with your name
+•	A <h2> with your profession or dream job
+•	Two <p> elements with anything about your goals or favorite hobby
+Expected Output:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Goals</title>
+  </head>
+  <body>
+    <h1>Sam Coder</h1>
+    <h2>Future Web Developer</h2>
+    <p>I love learning how websites work.</p>
+    <p>One day, I want to build apps that help people.</p>
+  </body>
+</html>
+________________________________________
+📘 Chapter 4: Links
+🧠 Concept:
+Links enable users to navigate from one page to another, either within your site or across the web.
+Syntax:
+<a href=“https://example.com”>Visit Example</a>
+•	The <a> tag creates hyperlinks.
+•	href stands for hypertext reference and tells the browser where the link should go.
+•	Text between <a>...</a> is clickable.
+Links can:
+•	Open websites
+•	Download files
+•	Jump to sections within a page (called anchors)
+Tip: Add target="_blank" if you want the link to open in a new tab.
+💡 Example:
+<a href=https://codesensei.app target="_blank">Visit CodeSensei</a>
+🧪 Mini Challenge:
+Task:
+•	Add a link to your favorite website
+Expected Output:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fun Link</title>
+  </head>
+  <body>
+    <a href="https://openai.com">Check out OpenAI!</a>
+  </body>
+</html>
+________________________________________
+📘 Chapter 5: Images
+🧠 Concept:
+Images add life to your web pages! Use them for decoration, demonstration, or to support your content.
+•	The <img> tag is self-closing (no closing tag).
+•	src is the path or URL to the image.
+•	alt provides fallback text (for screen readers or when images don’t load).
+Images can be sourced from:
+•	Your local project folder
+•	Online URLs (CDNs, external sites)
+Always use alt text for accessibility and better SEO.
+💡 Syntax:
+<img src="cat.jpg" alt="A cute cat" />
+🌐 Tip:
+To use an image, place it in the same folder as your index.html, or use a full image URL.
+🧪 Mini Challenge:
+Task:
+•	Add a local image or use a public image URL
+Expected Output:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fun Pic</title>
+  </head>
+  <body>
+    <img src="https://placekitten.com/300/200" alt="Cute kitten" />
+  </body>
+</html>
+________________________________________
+📘 Chapter 6: Lists
+🧠 Concept:
+Lists are perfect for organizing information like menus, to-dos, or instructions.
+•	<ul> = unordered list (bullets)
+•	<ol> = ordered list (numbers)
+•	<li> = list item (used inside both types)
+Use lists to break up info and improve readability. Nesting is also possible — one list inside another!
+💡 Syntax:
+<ul>
+  <li>Pizza</li>
+  <li>Burger</li>
+</ul>
+
+<ol>
+  <li>Wake up</li>
+  <li>Code</li>
+</ol>
+🧪 Mini Challenge:
+Task:
+•	Create a list of your top 3 favorite websites
+Expected Output:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Top Websites</title>
+  </head>
+  <body>
+    <ul>
+      <li>https://github.com</li>
+      <li>https://developer.mozilla.org</li>
+      <li>https://css-tricks.com</li>
+    </ul>
+  </body>
+</html>
+________________________________________
+📘 Chapter 7: Divs
+🧠 Concept:
+<div> is short for division — a generic container for grouping elements.
+It doesn’t affect the look of the page by itself, but it’s powerful when combined with CSS.
+Use <div> to:
+•	Group related elements
+•	Create sections or layouts
+•	Apply shared styles
+Think of <div> as invisible boxes to organize and control layout — like invisible Tupperware containers!)
+💡 Syntax:
+<div>
+  <h2>My Favorite Things</h2>
+  <p>Coding, cats, coffee ☕</p>
+</div>
+🧪 Mini Challenge:
+Task:
+•	Create a section using <div> that contains a heading and a paragraph
+Expected Output:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Using Divs</title>
+  </head>
+  <body>
+    <div>
+      <h2>My Favorite Things</h2>
+      <p>Coding, cats, coffee ☕</p>
+    </div>
+  </body>
+</html>
+________________________________________
+✅ Project 1: Build a Personal Bio Page
+🧩 Challenge:
+Use everything you’ve learned to build a basic personal bio page.
+🛠️ Requirements:
+•	Use proper HTML structure
+•	Include a heading, subheading, and paragraph(s)
+•	Add an image
+•	Create a list of skills or hobbies
+•	Add a link to your favorite website
+✅  Output:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Meet Alex</title>
+  </head>
+  <body>
+    <h1>Alex Johnson</h1>
+    <h2>Web Developer in the Making</h2>
+    <img src="alex.jpg" alt="Alex smiling" />
+    <p>I love building websites and learning cool stuff.</p>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Design</li>
+    </ul>
+    <a href="https://github.com">Check out my GitHub</a>
+  </body>
+</html>
