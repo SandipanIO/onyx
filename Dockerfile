@@ -1,21 +1,21 @@
-# Use official Python image
 FROM python:3.10-slim
 
-# Set work directory
 WORKDIR /app
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y gcc build-essential git
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libpq-dev \
+    git \
+    curl \
+ && rm -rf /var/lib/apt/lists/*
 
 # Copy all files
 COPY . .
 
 # Install Python dependencies
 RUN pip install --upgrade pip
-RUN pip install -r backend/requirements/default.txt
+RUN pip install -r backend/requirements/base.txt
 
-# Set environment variables
-ENV PYTHONUNBUFFERED=1
-
-# Start the app
-CMD ["python", "-m", "backend.onyx.server"]
+# Launch the app directly
+CMD ["python", "backend/onyx/server/__init__.py"]
