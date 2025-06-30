@@ -1,21 +1,18 @@
-# Use Python 3.10 slim image
-FROM python:3.10-slim
-
-# Set root working directory
+# Set working directory
 WORKDIR /app
 
-# Copy everything into the container
+# Copy all code
 COPY . .
 
-# Set PYTHONPATH so that onyx modules inside backend/ are importable
-ENV PYTHONPATH="${PYTHONPATH}:/app/backend"
-
-# Go into backend directory
+# Change working dir to backend
 WORKDIR /app/backend
 
-# Install Python dependencies
+# Set PYTHONPATH so Python knows where to import from
+ENV PYTHONPATH=/app/backend
+
+# Install deps
 RUN pip install --upgrade pip
 RUN pip install -r requirements/default.txt
 
-# Start FastAPI using uvicorn
+# Run app
 CMD ["uvicorn", "onyx.server:app", "--host", "0.0.0.0", "--port", "10000"]
