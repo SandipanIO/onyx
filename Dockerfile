@@ -1,17 +1,17 @@
 # Use Python 3.10 slim image
 FROM python:3.10-slim
 
-# Set working directory
+# Set root working directory
 WORKDIR /app
 
-# Copy entire backend folder into container
+# Copy everything into the container
 COPY . .
+
+# Set PYTHONPATH so that onyx modules inside backend/ are importable
+ENV PYTHONPATH="${PYTHONPATH}:/app/backend"
 
 # Go into backend directory
 WORKDIR /app/backend
-
-# Add Python path so that "onyx" is importable
-ENV PYTHONPATH="${PYTHONPATH}:/app/backend"
 
 # Install Python dependencies
 RUN pip install --upgrade pip
