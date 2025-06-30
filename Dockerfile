@@ -12,6 +12,6 @@ RUN apt-get update && apt-get install -y \
 COPY . .
 
 RUN pip install --upgrade pip
-RUN pip install -r backend/onyx/requirements/base.txt
+RUN pip install -r backend/requirements/default.txt
 
 CMD ["python", "backend/onyx/server/__init__.py"]
